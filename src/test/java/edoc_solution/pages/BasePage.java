@@ -14,6 +14,7 @@ public abstract class BasePage {
     @FindBy(xpath = "//span[text()='Alles akzeptieren']")
     public WebElement ButtonCokie;
 
+
 }
 
 
