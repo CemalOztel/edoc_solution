@@ -17,12 +17,12 @@ public class HamburgerMenu_StepDefs {
     }
 
     @When("Der Benutzer klickt auf die Box {string}")
-    public void der_benutzer_klickt_auf_die_box(String value) {
+    public void derBenutzerKlicktAufDieBox(String value) {
         hamburgerMenuPage.MainItemClick(value);
     }
 
     @Then("Der Benutzer wird zur Seite Digitale Lösungen weitergeleitet")
-    public void der_benutzer_wird_zur_seite_digitale_lösungen_weitergeleitet() {
+    public void derBenutzerWirdZurSeiteDigitaleLösungenWeitergeleitet() {
         BrowserUtils.verifyElementDisplayed(hamburgerMenuPage.TextDigitaleLösungen);
     }
 
