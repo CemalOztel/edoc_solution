@@ -13,7 +13,7 @@ public class HamburgerMenu_StepDefs {
     @Given("Der Benutzer befindet sich auf der Startseite und klickt auf das Hamburger-Menü")
     public void der_benutzer_befindet_sich_auf_der_startseite_und_klickt_auf_das_hamburger_menü() {
         hamburgerMenuPage.ButtonCokie.click();
-        hamburgerMenuPage.HamMenuButton.click();
+        hamburgerMenuPage.ButtonHamMenu.click();
     }
 
     @When("Der Benutzer klickt auf die Box {string}")

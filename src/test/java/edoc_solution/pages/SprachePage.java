@@ -1,5 +1,6 @@
 package edoc_solution.pages;
 
+import edoc_solution.utilities.BrowserUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -13,9 +14,12 @@ public class SprachePage extends BasePage{
     @FindBy(xpath = "//*[contains(text(), 'ECM-Spezialist für alle ERP-Systeme')]")
     public WebElement TextDeutsch;
     public void ClickENG() {
+        BrowserUtils.waitFor(2);
         languageENG.click();
+        BrowserUtils.waitFor(2);
     }
     public void ClickDE() {
         languageDE.click();
+        BrowserUtils.waitFor(2);
     }
 }
