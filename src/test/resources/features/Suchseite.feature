@@ -1,10 +1,10 @@
-@c
+@SmokeTest @Edoc-03
 Feature: Searchfunktion auf der Webseite
 
   Background:
     Given Der Benutzer befindet sich auf der Startseite und klickt auf das Such Icon
 
-  @Edoc-01
+  @Suche-01
   Scenario Outline: Klicken Sie auf das Suchsymbol und führen Sie eine Suche durch
     When der Benutzer in das Suchbegriff "<Suchbegriff>" eingibt
     And Der Benutzer drückt den „Suchen“-Button.

@@ -1,5 +1,6 @@
 package edoc_solution.pages;
 
+import edoc_solution.utilities.BrowserUtils;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -26,6 +27,7 @@ public class SuchPage extends BasePage{
     }
     public void SuchenButtonClick() {
         ButtonSuchen.click();
+        BrowserUtils.waitFor(2);
     }
     public void SuchResult(String TextResult) {
         boolean found = false;

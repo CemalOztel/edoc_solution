@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class HamburgerMenuPage extends BasePage {
     @FindBy(xpath = "//a[@class='navtoggle']")
-    public WebElement HamMenuButton;
+    public WebElement ButtonHamMenu;
     @FindBy(xpath = "(//*[contains(text(), 'Digitale Lösungen für Ihre Geschäftsprozesse')])[2]")
     public WebElement TextDigitaleLösungen;
     @FindBy(xpath = "//*[contains(text(), 'ECM Integrationen mit edoc')]")
