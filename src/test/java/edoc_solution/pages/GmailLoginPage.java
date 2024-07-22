@@ -16,7 +16,7 @@ public class GmailLoginPage extends BasePage {
     @FindBy (id = ":3s")
     public WebElement verifyEmail;
 
-    public void WaitMainPage() {
+    public void MainPage() {
 
         ButtunAnmelden.click();
         BrowserUtils.waitFor(2);
@@ -25,7 +25,7 @@ public class GmailLoginPage extends BasePage {
 
         FeldEMail.sendKeys(EMail);
         ButtonWeiter.click();
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(1);
         FeldPasswort.sendKeys(Passwort);
     }
 

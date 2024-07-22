@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "edoc_solution/step_definitions",
         dryRun = false,
-        tags = "@Edoc-02"
+        tags = "@Edoc-01"
 )
 public class CukesRunner {
 }

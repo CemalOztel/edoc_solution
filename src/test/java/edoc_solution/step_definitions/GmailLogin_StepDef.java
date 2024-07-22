@@ -11,27 +11,27 @@ import org.junit.Assert;
 
 
 public class GmailLogin_StepDef {
-    GmailLoginPage gmailLoginPage=new GmailLoginPage();
+    GmailLoginPage gmailLoginPage = new GmailLoginPage();
 
-    @Given("Der Benutzer befindet sich auf der Mainseite")
-    public void der_benutzer_befindet_sich_auf_der_mainseite() {
-        gmailLoginPage.WaitMainPage();
+    @Given("Der Benutzer befindet sich auf der Startseite und klickt auf den Anmelden-Button")
+    public void derBenutzerBefindetSichAufDerStartseiteUndKlicktAufDenAnmeldenButton() {
+        gmailLoginPage.MainPage();
     }
+
     @When("Der Benutzer gibt eine gültige E-Mail-Adresse und ein gültiges Password ein {string} and {string}")
     public void der_benutzer_gibt_eine_gultige_e_mail_adresse_und_ein_gultiges_password_ein_and(String EMail, String Passwort) {
-        gmailLoginPage.LoginData(EMail,Passwort);
+        gmailLoginPage.LoginData(EMail, Passwort);
     }
-    @And("Der Benutzer klickt auf die Schaltfläche Weiter")
-    public void derBenutzerKlicktAufDieSchaltflächeWeiter() {
+
+    @And("Der Benutzer klickt auf die  Weiter Button")
+    public void derBenutzerKlicktAufDieWeiterButton() {
         gmailLoginPage.ClickLogin();
     }
 
-    @Then("Der Benutzer sollte die Dashboard-Seite sehen")
-    public void derBenutzerSollteDieDashboardSeiteSehen() {
+    @Then("Der Benutzer sollte die Startseite sehen")
+    public void derBenutzerSollteDieStartseiteSehen() {
         BrowserUtils.verifyElementDisplayed(gmailLoginPage.verifyEmail);
         BrowserUtils.waitFor(2);
         Driver.closeDriver();
     }
-
-
 }
