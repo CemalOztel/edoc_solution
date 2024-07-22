@@ -27,6 +27,7 @@ public class GmailLoginPage extends BasePage {
         ButtonWeiter.click();
         BrowserUtils.waitFor(1);
         FeldPasswort.sendKeys(Passwort);
+        BrowserUtils.waitFor(1);
     }
 
     public void ClickLogin() {

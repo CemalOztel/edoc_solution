@@ -29,19 +29,19 @@ public class SuchPage extends BasePage{
         ButtonSuchen.click();
         BrowserUtils.waitFor(2);
     }
-    public void SuchResult(String TextResult) {
+    public void SuchResult(String SuchResult) {
         boolean found = false;
         for (WebElement result : resultList) {
-            if (result.getText().contains(TextResult)) {
+            if (result.getText().contains(SuchResult)) {
                 found = true;
                 //break;
             }
         }
 
         if (found) {
-            System.out.println("Search results contain '" + TextResult + "'. Test passed!");
+            System.out.println("Search results contain '" + SuchResult+ "'. Test passed!");
         } else {
-            System.out.println("Search results do not contain '" + TextResult + "'. Test failed!");
+            System.out.println("Search results do not contain '" + SuchResult + "'. Test failed!");
         }
     }
 }

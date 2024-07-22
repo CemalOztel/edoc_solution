@@ -8,9 +8,9 @@ Feature: Searchfunktion auf der Webseite
   Scenario Outline: Klicken Sie auf das Suchsymbol und führen Sie eine Suche durch
     When der Benutzer in das Suchbegriff "<Suchbegriff>" eingibt
     And Der Benutzer drückt den „Suchen“-Button.
-    Then Der Benutzer sollte bestätigen, ob der gesuchte Schlüsselwort als Result "<Result>" angezeigt wird.
+    Then Der Benutzer sollte bestätigen, ob der gesuchte Schlüsselwort als Result "<SuchResult>" angezeigt wird.
     Examples:
-      | Suchbegriff | Result    |
+      | Suchbegriff | SuchResult    |
       | München     | München   |
       | Stuttgart   | Stuttgart |
       | Berlin      | Berlin    |

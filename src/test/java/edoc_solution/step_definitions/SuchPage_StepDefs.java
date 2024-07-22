@@ -27,7 +27,7 @@ public class SuchPage_StepDefs {
 
 
     @Then("Der Benutzer sollte bestätigen, ob der gesuchte Schlüsselwort als Result {string} angezeigt wird.")
-    public void derBenutzerSollteBestätigenObDerGesuchteSchlüsselwortAlsResultAngezeigtWird(String TextResult) {
-        suchseite.SuchResult(TextResult);
+    public void derBenutzerSollteBestätigenObDerGesuchteSchlüsselwortAlsResultAngezeigtWird(String SuchResult) {
+        suchseite.SuchResult(SuchResult);
     }
 }
