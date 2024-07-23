@@ -18,20 +18,27 @@ public class GmailLogin_StepDef {
         gmailLoginPage.MainPage();
     }
 
-    @When("Der Benutzer gibt eine gültige E-Mail-Adresse und ein gültiges Password ein {string} and {string}")
-    public void der_benutzer_gibt_eine_gultige_e_mail_adresse_und_ein_gultiges_password_ein_and(String EMail, String Passwort) {
-        gmailLoginPage.LoginData(EMail, Passwort);
+    @When("Der Benutzer gibt eine gültige E-Mail-Adresse  ein {string}")
+    public void derBenutzerGibtEineGültigeEMailAdresseEin(String Email) {
+        gmailLoginPage.LoginEmailData(Email);
     }
 
     @And("Der Benutzer klickt auf die  Weiter Button")
     public void derBenutzerKlicktAufDieWeiterButton() {
-        gmailLoginPage.ClickLogin();
+        gmailLoginPage.ClickWeiterButton();
+    }
+
+    @When("Der Benutzer gibt eine  gültiges Password ein {string}")
+    public void derBenutzerGibtEineGültigesPasswordEin(String Passwort) {
+        gmailLoginPage.LoginPasswortData(Passwort);
     }
 
     @Then("Der Benutzer sollte die Startseite sehen")
     public void derBenutzerSollteDieStartseiteSehen() {
         BrowserUtils.verifyElementDisplayed(gmailLoginPage.verifyEmail);
-        BrowserUtils.waitFor(2);
+        BrowserUtils.waitFor(4);
         Driver.closeDriver();
     }
+
+
 }

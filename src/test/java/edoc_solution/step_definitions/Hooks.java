@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class Hooks {
     @Before
     public void setUp() {
-        Driver.get().get(ConfigurationReader.get("url"));
+        Driver.get().get(ConfigurationReader.get("url1"));
         Driver.get().manage().window().maximize();
         Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }

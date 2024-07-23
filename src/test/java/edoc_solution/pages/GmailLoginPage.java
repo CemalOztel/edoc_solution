@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class GmailLoginPage extends BasePage {
     @FindBy(xpath = "//a[text()='Anmelden']")
-    public WebElement ButtunAnmelden;
+    public WebElement ButtonAnmelden;
     @FindBy(xpath = "//input[@type='email']")
     public WebElement FeldEMail;
     @FindBy(xpath= "//input[@name='Passwd']")
@@ -17,21 +17,18 @@ public class GmailLoginPage extends BasePage {
     public WebElement verifyEmail;
 
     public void MainPage() {
-
-        ButtunAnmelden.click();
+        ButtonAnmelden.click();
         BrowserUtils.waitFor(2);
     }
-    public void LoginData(String EMail, String Passwort) {
-
+    public void LoginEmailData(String EMail) {
         FeldEMail.sendKeys(EMail);
-        ButtonWeiter.click();
         BrowserUtils.waitFor(1);
+    }
+    public void LoginPasswortData(String Passwort) {
         FeldPasswort.sendKeys(Passwort);
         BrowserUtils.waitFor(1);
     }
-
-    public void ClickLogin() {
-
+    public void ClickWeiterButton() {
         ButtonWeiter.click();
     }
 

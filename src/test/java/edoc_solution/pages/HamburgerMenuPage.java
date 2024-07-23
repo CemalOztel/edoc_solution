@@ -20,6 +20,11 @@ public class HamburgerMenuPage extends BasePage {
     @FindBy(xpath = "//*[contains(text(), 'Deshalb Enterprise Content Management mit edoc:')]")
     public WebElement TextWarumEdoc;
 
+    public void HamMenuClick() {
+        ButtonCokie.click();
+        ButtonHamMenu.click();
+    }
+
     public void MainItemClick(String generic) {
         WebElement Item = Driver.get().findElement(By.xpath("//a[text()='" + generic + "']"));
         BrowserUtils.waitFor(1);
